@@ -5,8 +5,10 @@
 body {
   /* property:value; is a CSS Rule */
   margin: 0;
+  /* background-color: red; */
 }
 
+/* HEADER */
 header {
   border-bottom: 5px solid black;
 }
@@ -17,15 +19,65 @@ ul {
   justify-content: end;
   align-items: center;
   list-style-type: none;
-  gap: 20px;
+  gap: 1.25em;
   padding: 0 10px;
 }
 
-main {
+/* MAIN */
+section {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.container {
+  max-width: 300px;
+}
+
+.aboutContainer {
+  display: flex;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectsContainer {
+  display: flex;
+  gap: 1em;
+}
+
+.card {
+  border: 2px solid black;
+  max-width: 300px;
+  display: flex;
+}
+
+.cardText, .cardImg {
+  width: 50%;
+}
+
+/* FOOTER */
 footer {
   display: flex;
   justify-content: center;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 426px) {
+  body {
+    /* background-color: yellow; */
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+  }
+
+  .projectsContainer {
+    flex-direction: column;
+  }
 }
